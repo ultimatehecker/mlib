@@ -33,8 +33,8 @@ public class PIDController {
 			throw new IllegalArgumentException("All coefficients must be an unsigned number.");
 		}
 
-		if (period < 0.0) {
-			throw new IllegalArgumentException("Time period must be an unsigned number");
+		if (period <= 0.0) {
+			throw new IllegalArgumentException("Time period must be a positive number");
 		}
 
 		this.kP = kP;
